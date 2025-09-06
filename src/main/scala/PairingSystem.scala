@@ -1,9 +1,10 @@
-package lila.swiss
+package swiss
 
 import java.io.File
 import scala.concurrent.blocking
 import scala.sys.process.*
 import java.util.concurrent.Executor
+
 
 final private class PairingSystem(trf: SwissTrf, executable: String)(using
     Executor,
@@ -66,3 +67,5 @@ final private class PairingSystem(trf: SwissTrf, executable: String)(using
 
 private object PairingSystem:
   case class BBPairingException(message: String, swiss: Swiss) extends lila.core.lilaism.LilaException
+
+//  LocalWords:  burstein
